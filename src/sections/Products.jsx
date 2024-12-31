@@ -2,6 +2,7 @@ import {
   Box,
   Card,
   CardBody,
+  Center,
   Flex,
   Heading,
   Image,
@@ -37,9 +38,11 @@ export default function Products() {
       </Box>
       <Flex mt={6} gap={4} direction={{ base: "column", md: "row" }}>
         {datas.map((el, i) => (
-          <Card key={i} w={{ base: 392, md: 228 }}>
+          <Card key={i} w={{ base: 302, md: 242 }}>
             <CardBody>
-              <Image w="200px" src={el.img} alt={el.name} borderRadius="lg" />
+              <Center>
+                <Image w="200px" src={el.img} alt={el.name} borderRadius="lg" />
+              </Center>
               <Stack mt="6" spacing="3">
                 <Heading size="md">{el.name}</Heading>
                 <Text color="blue.600" fontSize="2xl">

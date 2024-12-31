@@ -48,7 +48,7 @@ export default function Products() {
       </Box>
       <Flex mt={6} gap={4} direction={{ base: "column", md: "row" }}>
         {datas.map((el, i) => (
-          <Card key={i} w={{ base: 392, md: 228 }}>
+          <Card key={i} w={{ base: 302, md: 242 }}>
             <CardHeader>
               <Avatar src={el.profile} mb={2} />
               <Heading size="md">{el.author}</Heading>
