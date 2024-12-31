@@ -6,7 +6,6 @@ import {
   CardHeader,
   Flex,
   Heading,
-  SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import { sectionStyle } from "../lib";
@@ -47,13 +46,9 @@ export default function Products() {
           sangat menilai kami dalam menjual barang-barang di supermarket kami.
         </Text>
       </Box>
-      <SimpleGrid
-        mt={6}
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
-      >
+      <Flex mt={6} gap={4} direction={{ base: "column", md: "row" }}>
         {datas.map((el, i) => (
-          <Card key={i}>
+          <Card key={i} w={{ base: 392, md: 228 }}>
             <CardHeader>
               <Avatar src={el.profile} mb={2} />
               <Heading size="md">{el.author}</Heading>
@@ -63,7 +58,7 @@ export default function Products() {
             </CardBody>
           </Card>
         ))}
-      </SimpleGrid>
+      </Flex>
     </Flex>
   );
 }

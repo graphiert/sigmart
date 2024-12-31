@@ -86,7 +86,12 @@ export default function Navbar() {
                 Sigmart
               </Heading>
               {menus.map((el, i) => (
-                <Link key={i} href={el.link} p={4}>
+                <Link
+                  key={i}
+                  onClick={() => setTimeout(() => onClose(), 500)}
+                  href={el.link}
+                  p={4}
+                >
                   {el.title}
                 </Link>
               ))}

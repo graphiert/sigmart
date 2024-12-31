@@ -37,7 +37,7 @@ export default function Products() {
       </Box>
       <Flex mt={6} gap={4} direction={{ base: "column", md: "row" }}>
         {datas.map((el, i) => (
-          <Card key={i}>
+          <Card key={i} w={{ base: 392, md: 228 }}>
             <CardBody>
               <Image w="200px" src={el.img} alt={el.name} borderRadius="lg" />
               <Stack mt="6" spacing="3">
